@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { API } from "aws-amplify";
 import { API, Storage } from 'aws-amplify';
 import {
   Button,
@@ -95,8 +94,8 @@ const App = ({ signOut }) => {
             Create Note
           </Button>
         </Flex>
+        <View name="image" as="input" type="file" style={{ alignSelf: "end" }}/>
       </View>
-      <View name="image" as="input" type="file" style={{ alignSelf: "end" }}/>
       <Heading level={2}>Current Notes</Heading>
       <View margin="3rem 0">
         {notes.map((note) => (
